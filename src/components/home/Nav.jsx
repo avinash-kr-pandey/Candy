@@ -38,25 +38,22 @@ function Nav({ setSideNav, SideNav }) {
     navigate("/brandcollections", { state: { page } });
   };
 
-
   return (
-    <section className="flex flex-col items-center text-blue-900">
-      <article className="flex items-center justify-evenly md:justify-between md:w-[80%] py-5">
+    <section className="flex flex-col items-center text-blue-900 w-full">
+      <article className="flex items-center justify-between w-full md:w-[80%] py-5 px-4">
         <CiMenuBurger
-          className=" text-black text-2xl lg:hidden"
+          className="text-black text-2xl lg:hidden"
           onClick={HandleClick}
         />
-        <img src="logo.avif" alt="" className="md:w-[500px] w-[50%]" />
-        <div className="flex gap-7 items-center text-2xl">
+        <img src="logo.avif" alt="" className="md:w-[200px] w-[50%]" />
+        <div className="flex gap-4 items-center text-2xl">
           <CiSearch />
           <NavLink to="/login">
             <CgProfile className="hidden md:block" />
           </NavLink>
-          {/* add to cart  */}
           <NavLink to="/cart">
             <BsCart className="hidden md:block" />
           </NavLink>
-
           <button
             onClick={HandleLogOut}
             className={`${
@@ -68,18 +65,16 @@ function Nav({ setSideNav, SideNav }) {
         </div>
       </article>
       <article className="w-full">
-        <ul className="flex gap-6 items-center justify-center font-medium py-4 text-lg">
+        <ul className="flex flex-wrap gap-4 items-center justify-center font-medium py-4 text-lg">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "underline" : "")}
           >
             Home
           </NavLink>
-          {/* By Type  */}
-
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <MenuButton className="inline-flex w-full justify-center px-3 font-medium py-4 text-lg font-boldgap-6">
+              <MenuButton className="inline-flex w-full justify-center px-3 font-medium py-4 text-lg font-bold gap-2">
                 By Type
                 <ChevronDownIcon
                   className="-mr-1 h-8 w-6 pl-1"
@@ -162,10 +157,9 @@ function Nav({ setSideNav, SideNav }) {
             </Transition>
           </Menu>
 
-          {/* By brand  */}
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <MenuButton className="inline-flex w-full justify-center px-3 font-medium py-4 text-lg font-boldgap-6">
+              <MenuButton className="inline-flex w-full justify-center px-3 font-medium py-4 text-lg font-bold gap-2">
                 By Brand
                 <ChevronDownIcon
                   className="-mr-1 h-8 w-5 pl-1"
@@ -186,9 +180,7 @@ function Nav({ setSideNav, SideNav }) {
                   <MenuItem>
                     {({ active }) => (
                       <button
-                        onClick={() =>
-                          BrandhandleDropdownClick("")
-                        }
+                        onClick={() => BrandhandleDropdownClick("page1")}
                         className={classNames(
                           active
                             ? "bg-gray-100 text-gray-900"
@@ -203,9 +195,7 @@ function Nav({ setSideNav, SideNav }) {
                   <MenuItem>
                     {({ active }) => (
                       <button
-                        onClick={() =>
-                          BrandhandleDropdownClick("page1") 
-                        }
+                        onClick={() => BrandhandleDropdownClick("page2")}
                         className={classNames(
                           active
                             ? "bg-gray-100 text-gray-900"
@@ -220,9 +210,7 @@ function Nav({ setSideNav, SideNav }) {
                   <MenuItem>
                     {({ active }) => (
                       <button
-                        onClick={() =>
-                          BrandhandleDropdownClick("page2")
-                        }
+                        onClick={() => BrandhandleDropdownClick("page3")}
                         className={classNames(
                           active
                             ? "bg-gray-100 text-gray-900"
@@ -237,9 +225,7 @@ function Nav({ setSideNav, SideNav }) {
                   <MenuItem>
                     {({ active }) => (
                       <button
-                        onClick={() =>
-                          BrandhandleDropdownClick("page3")
-                        }
+                        onClick={() => BrandhandleDropdownClick("page4")}
                         className={classNames(
                           active
                             ? "bg-gray-100 text-gray-900"
@@ -251,33 +237,14 @@ function Nav({ setSideNav, SideNav }) {
                       </button>
                     )}
                   </MenuItem>
-                  <MenuItem>
-                    {({ active }) => (
-                      <button
-                        onClick={() =>
-                          BrandhandleDropdownClick("page4")
-                        }
-                        className={classNames(
-                          active
-                            ? "bg-gray-100 text-gray-900"
-                            : "text-gray-700",
-                          "block px-4 py-2 text-sm"
-                        )}
-                      >
-                        Page 4
-                      </button>
-                    )}
-                  </MenuItem>
-                  {/* Add other dropdown options with onClick handlers */}
                 </div>
               </MenuItems>
             </Transition>
           </Menu>
 
-          {/* By Country  */}
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <MenuButton className="inline-flex w-full justify-center px-3 font-medium py-4 text-lg font-boldgap-6">
+              <MenuButton className="inline-flex w-full justify-center px-3 font-medium py-4 text-lg font-bold gap-2">
                 By Country
                 <ChevronDownIcon
                   className="-mr-1 h-8 w-5 pl-1"
@@ -410,15 +377,13 @@ function Nav({ setSideNav, SideNav }) {
               </MenuItems>
             </Transition>
           </Menu>
-          {/* All Products  */}
+
           <NavLink
             to="/products"
             className={({ isActive }) => (isActive ? "underline" : "")}
           >
             All Products
           </NavLink>
-
-          {/* Beverages  */}
           <NavLink
             to="/bevereges"
             className={({ isActive }) => (isActive ? "underline" : "")}

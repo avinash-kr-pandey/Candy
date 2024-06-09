@@ -12,6 +12,7 @@ import SpecialDeals from "../pages/SpecialDeals";
 import Collections from "../pages/ByTypeCollections/Collections";
 import BrandCollections from "../pages/ByBrandCollections/BrandCollections";
 import Bevereges from "../pages/Bevereges";
+import FeaturedNew from "../pages/FeaturedNew";
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/collections" element={<Collections/>} />
       <Route path="/brandcollections" element={<BrandCollections/>} />
       <Route path="/bevereges" element={<Bevereges/>}/>
+      <Route path="/featurednew" element={<FeaturedNew/>}/>
     </Routes>
   );
 }
