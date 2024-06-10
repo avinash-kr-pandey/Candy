@@ -24,7 +24,7 @@ function Login() {
           setPassword("");
           sessionStorage.setItem("token", e.data.accessToken);
           setToken(sessionStorage.getItem("token"));
-          nevigation("/orderHistory");
+          nevigation("/cart");
         })
         .catch((e) => {
           alert(e.response.data.error);
@@ -34,6 +34,12 @@ function Login() {
     }
   };
 
+  const navigate = useNavigate();
+  // const handleButtonClick = () => {
+  //   console.log("Login Button clicked")
+  //   GetLogin();
+  //   navigate('/cart');
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     GetLogin();
