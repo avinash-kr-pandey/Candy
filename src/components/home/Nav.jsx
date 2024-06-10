@@ -64,7 +64,7 @@ function Nav({ setSideNav, SideNav }) {
           </button>
         </div>
       </article>
-      <article className="w-full">
+      <article className="w-full hidden md:block">
         <ul className="flex flex-wrap gap-4 items-center justify-center font-medium py-4 text-lg">
           <NavLink
             to="/"

@@ -57,7 +57,7 @@ function App() {
 
           <Menu as="div" className="relative inline-block">
             <div>
-              <MenuButton className="inline-flex w-full font-medium text-xxl font-boldgap-6">
+              <MenuButton className="inline-flex w-full font-medium text-xxl font-bold gap-6">
                 By Type
                 <ChevronDownIcon
                   className="-mr-1 h-8 w-6 pl-1"
@@ -134,7 +134,7 @@ function App() {
 
           <Menu as="div" className="relative inline-block">
             <div>
-              <MenuButton className="inline-flex w-full font-medium text-xxl font-boldgap-6">
+              <MenuButton className="inline-flex w-full font-medium text-xxl font-bold gap-6">
                 By Brand
                 <ChevronDownIcon
                   className="-mr-1 h-8 w-5 pl-1"
@@ -155,7 +155,7 @@ function App() {
                   <MenuItem>
                     {({ active }) => (
                       <button
-                        onClick={() => BrandhandleDropdownClick("")}
+                        onClick={() => BrandhandleDropdownClick("page1")}
                         className={classNames(
                           active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                           "block px-4 py-2 text-sm"
@@ -168,7 +168,7 @@ function App() {
                   <MenuItem>
                     {({ active }) => (
                       <button
-                        onClick={() => BrandhandleDropdownClick("page1")}
+                        onClick={() => BrandhandleDropdownClick("page2")}
                         className={classNames(
                           active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                           "block px-4 py-2 text-sm"
@@ -181,26 +181,13 @@ function App() {
                   <MenuItem>
                     {({ active }) => (
                       <button
-                        onClick={() => BrandhandleDropdownClick("page2")}
-                        className={classNames(
-                          active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                          "block px-4 py-2 text-sm"
-                        )}
-                      >
-                        Page 3
-                      </button>
-                    )}
-                  </MenuItem>
-                  <MenuItem>
-                    {({ active }) => (
-                      <button
                         onClick={() => BrandhandleDropdownClick("page3")}
                         className={classNames(
                           active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                           "block px-4 py-2 text-sm"
                         )}
                       >
-                        Page 4
+                        Page 3
                       </button>
                     )}
                   </MenuItem>
@@ -225,10 +212,10 @@ function App() {
             By Country
           </NavLink>
           <NavLink to="/bevereges" onClick={HandleSide}>
-            Bevereges
+            Beverages
           </NavLink>
           <NavLink to="/specialdeals" onClick={HandleSide}>
-            SpecialDeals
+            Special Deals
           </NavLink>
           <NavLink
             to="products"
