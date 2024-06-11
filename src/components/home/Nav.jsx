@@ -51,9 +51,9 @@ function Nav({ setSideNav, SideNav }) {
           <NavLink to="/login">
             <CgProfile className="hidden md:block" />
           </NavLink>
-          <NavLink to="/cart">
+          {/* <NavLink to="/cart">
             <BsCart className="hidden md:block" />
-          </NavLink>
+          </NavLink> */}
           <button
             onClick={HandleLogOut}
             className={`${

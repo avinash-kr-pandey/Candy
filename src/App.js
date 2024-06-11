@@ -7,6 +7,7 @@ import { CgProfile } from "react-icons/cg";
 import AddCart from "./pages/AddCart";
 import { useNavigate } from "react-router-dom";
 
+
 import {
   Menu,
   MenuButton,
